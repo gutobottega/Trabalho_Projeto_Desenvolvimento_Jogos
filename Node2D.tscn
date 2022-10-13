@@ -23,3 +23,7 @@ text = "AHHHHHHH"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Node" type="Node" parent="."]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Node"]
