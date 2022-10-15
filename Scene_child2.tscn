@@ -188,7 +188,7 @@ points = PoolVector2Array( 24, 52, 0, 52, 0, 4, 24, 4 )
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 30, 35.75 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Scene_Child_main_node" type="Node2D"]
 script = ExtResource( 6 )
 
 [node name="Ground" type="TileMap" parent="."]
