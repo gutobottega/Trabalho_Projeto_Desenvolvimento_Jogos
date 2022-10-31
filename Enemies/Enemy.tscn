@@ -1,10 +1,9 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Texture/Character/AnimationSheet_Character.png" type="Texture" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.156, 16.6431 )
+extents = Vector2( 10.9428, 15.8614 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -94,19 +93,17 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D"]
 collision_mask = 0
-script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.5, 0.5 )
-smoothing_enabled = true
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1.12247, -1.6837 )
+modulate = Color( 0.384314, 0, 1, 1 )
+self_modulate = Color( 0.384314, 0, 1, 1 )
+position = Vector2( -1.12373, -1.12372 )
 frames = SubResource( 16 )
 animation = "Walk"
+frame = 3
+flip_h = true
