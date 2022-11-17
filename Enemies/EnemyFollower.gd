@@ -19,6 +19,7 @@ func _ready():
 func _physics_process(delta):
 	if path.size() > 0:
 		move_to_target()
+
 func move_to_target():
 	if global_position.distance_to(path[0]) < threshold:
 		path.remove(0)
@@ -38,5 +39,6 @@ func move():
 	velocity = move_and_slide(velocity)
 	
 func get_target_path(target_pos):
+	print('enemy')
 	sprite.play('Walk')
 	path = nav.get_simple_path(global_position, target_pos, false)

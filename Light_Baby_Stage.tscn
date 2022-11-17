@@ -22,7 +22,7 @@
 [ext_resource path="res://Texture/7/19.png" type="Texture" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10.4547, 8.33591 )
+extents = Vector2( 6.74719, 4.44561 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -32,15 +32,17 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="Light_Baby_Stage" type="KinematicBody2D"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 290.954, -35.491 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 290.423, -42.5471 )
+position = Vector2( 290.364, -42.5471 )
 scale = Vector2( 1.04176, 0.937359 )
 frames = SubResource( 2 )
-frame = 12
+frame = 11
 playing = true

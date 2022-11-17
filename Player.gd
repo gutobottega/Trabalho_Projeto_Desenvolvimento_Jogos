@@ -94,3 +94,8 @@ func _on_TransitionAreaChildInicialFinal_body_entered(body):
 	print("yy")
 	colliding = true
 	collidingGroup = "TransitionAreaChildInicialFinal"
+
+func _on_Timer_timeout():
+	print('poe')
+	get_tree().call_group("Enemies", "get_target_path", global_position)
+
