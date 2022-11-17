@@ -45,36 +45,52 @@ func _physics_process(delta):
 
 	
 func _on_AltarArea1_body_entered(body):
-	print("enter")
 	colliding = true
 	collidingGroup = "Obstacle1"
 	
 	
 func _on_AltarArea1_body_exited(body):
-	print("exit")
 	colliding = false
 	collidingGroup = ""
 
 
 func _on_AltarArea2_body_entered(body):
-	print("enter")
 	colliding = true
 	collidingGroup = "Obstacle2"
 
 
 func _on_AltarArea2_body_exited(body):
-	print("exit")
 	colliding = false
 	collidingGroup = ""
 
 
 func _on_AltarArea3_body_entered(body):
-	print("enter")
 	colliding = true
 	collidingGroup = "Obstacle3"
 
 
 func _on_AltarArea3_body_exited(body):
-	print("exit")
 	colliding = false
 	collidingGroup = ""
+	
+	
+###############
+# Signal List #
+###############
+
+func _on_AltarBox1_body_entered(body):
+	print("y")
+	colliding = true
+	collidingGroup = "AltarBox1"
+
+
+func _on_AltarBox1_body_exited(body):
+	print("n")
+	colliding = false
+	collidingGroup = ""
+
+
+func _on_TransitionAreaChildInicialFinal_body_entered(body):
+	print("yy")
+	colliding = true
+	collidingGroup = "TransitionAreaChildInicialFinal"

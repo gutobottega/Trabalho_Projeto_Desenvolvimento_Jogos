@@ -1,13 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Map.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemies/EnemyPatrol.gd" type="Script" id=3]
+[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( -226.274, -152.735, 226.274, 152.735, -198.392, -126.197, 0, 0, 0, 0, -262.071, -88.7393, 0, 0, 0, 0, -274.806, -21.3155, 0, 0, 0, 0, -154.942, 64.8372, 0, 0, 0, 0, 8.37393, 88.0609, 0, 0, 0, 0, 111.008, 58.0948, 0, 0, 0, 0, 138.727, -33.302, 0, 0, 0, 0, 114.005, -121.702, 0, 0, 0, 0, -51.5583, -141.18, 0, 0, 0, 0, -198.392, -126.197 )
+}
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.352448, 1.78314 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -23,3 +31,16 @@ text = "AHHHHHHH"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="EnemyPatrol" parent="." instance=ExtResource( 4 )]
+position = Vector2( 74.9153, 12.7356 )
+script = ExtResource( 3 )
+patrol_path = NodePath("../Path2D")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 74.9153, 12.7356 )
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -198.392, -126.197 )
+rotation = 0.595005
