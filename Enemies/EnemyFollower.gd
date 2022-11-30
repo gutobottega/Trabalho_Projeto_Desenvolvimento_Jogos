@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 onready var sprite := $AnimatedSprite
 var velocity = Vector2.ZERO
-var move_speed = 100
+var move_speed = 350
 var path = []
 var nav
 var threshold = 5
@@ -39,6 +39,9 @@ func move():
 	velocity = move_and_slide(velocity)
 	
 func get_target_path(target_pos):
-	print('enemy')
 	sprite.play('Walk')
 	path = nav.get_simple_path(global_position, target_pos, false)
+
+
+func _on_PlayerCollider_body_entered(body):
+	print('a')

@@ -6,6 +6,7 @@ var velocity = Vector2.ZERO
 
 onready var target := position
 onready var sprite := $AnimatedSprite
+export var colliding = false
 
 func get_input():
 	velocity.x = Input.get_action_strength("right")-Input.get_action_strength("left")
@@ -31,4 +32,4 @@ func _physics_process(delta):
 
 
 func _on_Area2D_body_entered(body):
-	print('Ir para proxima cena')
+	colliding = true

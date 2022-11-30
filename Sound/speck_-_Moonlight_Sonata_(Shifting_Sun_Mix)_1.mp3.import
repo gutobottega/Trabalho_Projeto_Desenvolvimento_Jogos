@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/speck_-_Moonlight_Sonata_(Shifting_Sun_Mix)_1.mp3-421344b1c87a49e282177eab3f660676.mp3str"
+
+[deps]
+
+source_file="res://Sound/speck_-_Moonlight_Sonata_(Shifting_Sun_Mix)_1.mp3"
+dest_files=[ "res://.import/speck_-_Moonlight_Sonata_(Shifting_Sun_Mix)_1.mp3-421344b1c87a49e282177eab3f660676.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

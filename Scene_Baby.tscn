@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Texture/Tilemap/TX Plant.png" type="Texture" id=1]
 [ext_resource path="res://Texture/Tilemap/Caves.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Light_Baby_Stage.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Baby.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/EnemyPatrol.gd" type="Script" id=6]
+[ext_resource path="res://Scene_Baby.gd" type="Script" id=7]
+[ext_resource path="res://Sound/Apoxode_-_resolve_1.mp3" type="AudioStream" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -366,14 +368,16 @@ points = PoolVector2Array( 32, 40, 0, 40, 0, 8, 32, 8 )
 17/shapes = [  ]
 17/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 11.0551, 8.03931 )
 
-[sub_resource type="Curve2D" id=14]
+[sub_resource type="Curve2D" id=15]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 108.432, 555.024, 0, 0, 0, 0, 182.829, 528.831, 0, 0, 0, 0, 237.493, 519.039, 0, 0, 0, 0, 272.944, 521.88, 0, 0, 0, 0, 333.874, 546.501, 0, 0, 0, 0, 388.711, 555.971, 0, 0, 0, 0, 436.901, 561.652, 0, 0, 0, 0, 533.282, 535.138, 0, 0, 0, 0, 583.688, 536.085, 0, 0, 0, 0, 632.432, 553.13, 0, 0, 0, 0, 680.623, 562.599, 0, 0, 0, 0, 753.185, 573.016, 0, 0, 0, 0, 822.978, 538.925, 0, 0, 0, 0, 864.521, 535.138, 0, 0, 0, 0, 918.805, 555.971 )
 }
 
 [node name="Scene_Baby" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="Ground" type="TileMap" parent="."]
 scale = Vector2( 0.5, 0.5 )
@@ -431,16 +435,22 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Light_Baby_Stage/Area2D"]
-position = Vector2( 108.108, 553.756 )
-shape = SubResource( 15 )
+position = Vector2( 108.248, 553.638 )
+shape = SubResource( 14 )
 
 [node name="Path2D" type="Path2D" parent="Light_Baby_Stage"]
 position = Vector2( 159.491, -446.097 )
 scale = Vector2( 1.27657, 0.746711 )
-curve = SubResource( 14 )
+curve = SubResource( 15 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Light_Baby_Stage/Path2D"]
 position = Vector2( 108.432, 555.024 )
-rotation = -0.338525
+rotation = -0.33851
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1184, 546 )
+stream = ExtResource( 8 )
+autoplay = true
+max_distance = 1000.0
 
 [connection signal="body_entered" from="Light_Baby_Stage/Area2D" to="Baby" method="_on_Area2D_body_entered"]

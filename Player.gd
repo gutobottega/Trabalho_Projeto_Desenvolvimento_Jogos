@@ -42,6 +42,8 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	
+
 
 	
 func _on_AltarArea1_body_entered(body):
@@ -96,6 +98,18 @@ func _on_TransitionAreaChildInicialFinal_body_entered(body):
 	collidingGroup = "TransitionAreaChildInicialFinal"
 
 func _on_Timer_timeout():
-	print('poe')
 	get_tree().call_group("Enemies", "get_target_path", global_position)
 
+
+
+func _on_TransitionArea_body_entered(body):
+	colliding = true
+	collidingGroup = "ExitAreaChild"
+
+
+func _on_Area2D_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_EnemyCollider_body_entered(body):
+	pass
