@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Apoxode_-_resolve_1.mp3-7259c70ff3a89b3489803adb9354db2a.mp3str"
+
+[deps]
+
+source_file="res://Sound/Apoxode_-_resolve_1.mp3"
+dest_files=[ "res://.import/Apoxode_-_resolve_1.mp3-7259c70ff3a89b3489803adb9354db2a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

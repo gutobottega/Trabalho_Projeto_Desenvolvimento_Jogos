@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SkyeJordan_-_Good_(Blissful)_Morning_Alice_1.mp3-0671a58f3e5cab2b2850b73b9babbabc.mp3str"
+
+[deps]
+
+source_file="res://Sound/SkyeJordan_-_Good_(Blissful)_Morning_Alice_1.mp3"
+dest_files=[ "res://.import/SkyeJordan_-_Good_(Blissful)_Morning_Alice_1.mp3-0671a58f3e5cab2b2850b73b9babbabc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NiGiD_-_Romance_for_Piano_and_Cello.mp3-994b075b33c77dce5ba879997316bc18.mp3str"
+
+[deps]
+
+source_file="res://Sound/NiGiD_-_Romance_for_Piano_and_Cello.mp3"
+dest_files=[ "res://.import/NiGiD_-_Romance_for_Piano_and_Cello.mp3-994b075b33c77dce5ba879997316bc18.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

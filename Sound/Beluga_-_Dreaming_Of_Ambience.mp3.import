@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Beluga_-_Dreaming_Of_Ambience.mp3-db7b6296ec356107df09477077f477ca.mp3str"
+
+[deps]
+
+source_file="res://Sound/Beluga_-_Dreaming_Of_Ambience.mp3"
+dest_files=[ "res://.import/Beluga_-_Dreaming_Of_Ambience.mp3-db7b6296ec356107df09477077f477ca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

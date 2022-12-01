@@ -1,0 +1,54 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Texture/Individual Sprites/adventurer-run-01.png" type="Texture" id=1]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-run-02.png" type="Texture" id=2]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-idle-2-01.png" type="Texture" id=3]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-idle-2-00.png" type="Texture" id=4]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-attack1-04.png" type="Texture" id=5]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-idle-2-03.png" type="Texture" id=6]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-attack1-02.png" type="Texture" id=7]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-run-04.png" type="Texture" id=8]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-attack1-03.png" type="Texture" id=9]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-run-05.png" type="Texture" id=10]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-attack1-01.png" type="Texture" id=11]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-run-03.png" type="Texture" id=12]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-idle-2-02.png" type="Texture" id=13]
+[ext_resource path="res://Texture/Individual Sprites/adventurer-attack1-00.png" type="Texture" id=14]
+[ext_resource path="res://Adult.gd" type="Script" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.252, 13.1628 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
+} ]
+
+[node name="Adult" type="KinematicBody2D"]
+script = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.230305, 3.67087 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "Walk"
+frame = 4
+playing = true
