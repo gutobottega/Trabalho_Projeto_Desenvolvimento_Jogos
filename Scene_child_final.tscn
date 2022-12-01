@@ -12,10 +12,10 @@ vertices = PoolVector2Array( 268.284, 628.749, 139.849, 626.965, 148.768, 526.47
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5, 6 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 11, 7, 10, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 17, 18, 19, 20 ), PoolIntArray( 21, 20, 19, 22 ), PoolIntArray( 12, 23, 24, 25 ), PoolIntArray( 11, 12, 25, 26 ), PoolIntArray( 27, 11, 26, 28 ), PoolIntArray( 29, 27, 28, 30 ), PoolIntArray( 29, 30, 31, 32 ), PoolIntArray( 33, 32, 31, 34 ), PoolIntArray( 35, 36, 37, 38 ), PoolIntArray( 39, 40, 41, 42 ), PoolIntArray( 43, 44, 45, 46 ), PoolIntArray( 47, 48, 49, 50 ), PoolIntArray( 51, 47, 50, 13 ), PoolIntArray( 16, 51, 13 ), PoolIntArray( 38, 16, 15, 35 ), PoolIntArray( 52, 53, 35, 54 ), PoolIntArray( 55, 56, 46, 45 ), PoolIntArray( 57, 58, 59, 60 ), PoolIntArray( 41, 57, 60, 21, 22 ), PoolIntArray( 41, 22, 43, 61 ), PoolIntArray( 5, 62, 6 ), PoolIntArray( 4, 6, 39, 63 ), PoolIntArray( 42, 63, 39 ), PoolIntArray( 64, 42, 41 ), PoolIntArray( 54, 65, 52 ), PoolIntArray( 15, 54, 35 ), PoolIntArray( 66, 38, 37, 67 ), PoolIntArray( 67, 37, 68 ), PoolIntArray( 34, 67, 68, 69 ), PoolIntArray( 33, 34, 69, 55 ), PoolIntArray( 45, 33, 55 ), PoolIntArray( 43, 46, 61 ), PoolIntArray( 41, 61, 64 ) ]
 outlines = [ PoolVector2Array( 399.835, 887.113, 397.837, 527.872, 533.654, 528.994, 530.848, 400.472, 649.268, 400.472, 647.584, 372.411, 498.297, 372.972, 497.736, 500.371, 148.65, 501.494, 149.211, 372.411, 116.66, 371.85, 114.876, 785.724, 147.851, 786.319, 154.714, 659.073, 266.914, 664.737, 268.284, 628.749, 139.849, 626.965, 148.768, 526.477, 377.096, 527.071, 376.502, 883.834, 275.419, 883.834, 275.419, 758.967, 243.31, 761.346, 246.283, 886.807, 14.3881, 887.401, 13.1989, 13.9283, 502.519, 13.3575, 502.519, 117.931, 120.822, 119.768, 122.011, 142.957, 378.285, 138.795, 375.907, 374.258, 267.689, 377.231, 269.473, 250.581, 118.444, 250.581, 119.633, 271.986, 247.473, 269.608, 247.473, 399.826, 402.07, 401.61, 402.07, 151.876, 529.909, 149.498, 529.315, 15.7123, 887.861, 16.3069, 888.456, 631.127, 652.993, 632.911, 659.533, 528.261, 787.373, 528.261, 789.751, 244.04, 656.56, 247.013, 657.749, 143.552, 779.049, 148.309, 780.832, 109.065, 629.208, 117.39, 628.614, 244.635, 501.369, 242.851, 498.396, 283.284, 755.859, 275.554, 757.048, 500.314, 630.398, 503.287, 628.614, 653.722, 887.861, 662.641, 886.077, 885.023, 534.017, 888.373, 534.647, 788.839, 779.049, 787.508, 780.238, 747.075, 528.126, 758.967, 527.531, 631.722, 497.801, 629.938, 496.849, 885.853 ) ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.26749, 15.1944 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 13.853, 56.9225 )
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -51,13 +51,13 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/EnemyCollider"]
 position = Vector2( -0.932617, 2.43115 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="AtkZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AtkZone"]
 position = Vector2( 517.212, 579.658 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 
 [node name="Enemy" parent="." groups=[
 "Enemies",

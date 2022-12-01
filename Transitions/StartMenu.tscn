@@ -91,3 +91,4 @@ stream = ExtResource( 3 )
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

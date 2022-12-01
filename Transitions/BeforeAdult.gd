@@ -24,3 +24,7 @@ func _process(delta):
 func _on_Button_pressed():
 	get_tree().change_scene("res://SceneAdult.tscn")
 	
+
+
+func _on_Quit_pressed():
+	get_tree().quit(1)

@@ -16,7 +16,7 @@ func _process(delta):
 	var sub: Vector2 = player.position - enemy.position
 	print(sub)
 	if abs(sub.x) < 2.5 and abs(sub.y) < 2.5:
-		get_tree().change_scene("res://Transitions/BeforeChild.tscn")
+		get_tree().change_scene("res://Transitions/ChildDeath.tscn")
 	
 	if player.colliding:
 		
