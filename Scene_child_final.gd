@@ -14,13 +14,15 @@ func _process(delta):
 	#print("p:"+str(player.position))
 	#print("e:"+str(enemy.position))
 	var sub: Vector2 = player.position - enemy.position
-	print(sub)
 	if abs(sub.x) < 2.5 and abs(sub.y) < 2.5:
-		get_tree().change_scene("res://Transitions/BeforeChild.tscn")
+		get_tree().change_scene("res://Transitions/ChildDeath.tscn")
 	
 	if player.colliding:
 		
 		if player.collidingGroup == "ExitAreaChild":
 			get_tree().change_scene("res://Transitions/BeforeAdult.tscn")
 		
-		
+		if player.collidingGroup == "KeyArea":
+			$Obstacle.set_collision_layer_bit(0,0)
+			$Obstacle.set_collision_mask_bit(0,0)
+			$Obstacle.hide()
