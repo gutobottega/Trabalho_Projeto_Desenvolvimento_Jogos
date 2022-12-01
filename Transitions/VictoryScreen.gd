@@ -1,8 +1,4 @@
-extends Node2D
-
-onready var timer = $Timer
-onready var nav = $Navigation2D
-onready var player = $Adult
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -12,9 +8,13 @@ onready var player = $Adult
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer.start(0.1)
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+#	pass
+
+
+func _on_Quit_pressed():
+	get_tree().quit(1)

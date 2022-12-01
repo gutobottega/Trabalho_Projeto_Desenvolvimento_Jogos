@@ -8,6 +8,8 @@ export var collidingGroup = ""
 var speed
 var velocity = Vector2.ZERO
 var movement = 'Walk'
+export var hit = 1000
+export var killed = 0
 
 onready var target := position
 onready var sprite := $AnimatedSprite
@@ -46,3 +48,24 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	
+
+func _process(delta):
+	
+	for member in get_tree().get_nodes_in_group("Adult_Enemy"):
+		if movement == "Attack" and abs(position.x - member.position.x) < 80 and abs(position.y - member.position.y) < 80:
+			member.hit = member.hit - 10
+			
+	if killed == 5:
+		get_tree().change_scene("res://Transitions/VictoryScreen.tscn")
+			
+	hit += 0.2
+			
+			
+	
+	if hit < 0:
+		get_tree().change_scene("res://Transitions/Adult Death.tscn")
+
+
+func _on_Timer_timeout():
+	get_tree().call_group("Adult_Enemy", "get_target_path", global_position)

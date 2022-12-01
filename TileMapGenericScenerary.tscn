@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Texture/Tilemap/TX Props.png" type="Texture" id=1]
 [ext_resource path="res://Texture/Tilemap/TX Tileset Grass.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Texture/Tilemap/TX Plant.png" type="Texture" id=6]
 [ext_resource path="res://Texture/Tilemap/TX Tileset Stone Ground.png" type="Texture" id=7]
 [ext_resource path="res://Texture/SERENE_VILLAGE_REVAMPED/Serene_Village_16x16.png" type="Texture" id=8]
+[ext_resource path="res://Texture/rpg_items.png" type="Texture" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 96, 96, 0, 96, 0, 0, 96, 0 )
@@ -861,6 +862,20 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 64, 0, 64 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 38/z_index = 0
+39/name = "rpg_items.png 39"
+39/texture = ExtResource( 9 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 16, 352, 16, 16 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 0, 0 )
+39/navigation_offset = Vector2( 0, 0 )
+39/shape_offset = Vector2( 0, 0 )
+39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+39/shape_one_way = false
+39/shape_one_way_margin = 0.0
+39/shapes = [  ]
+39/z_index = 0
 
 [node name="TileMapGenericScenerary" type="TileMap"]
 tile_set = SubResource( 33 )

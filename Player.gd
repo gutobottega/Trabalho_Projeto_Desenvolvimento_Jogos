@@ -13,7 +13,7 @@ onready var target := position
 onready var sprite := $AnimatedSprite
 
 func _ready():
-	pass
+	$key.hide()
 func get_input():
 	velocity.x = Input.get_action_strength("right")-Input.get_action_strength("left")
 	velocity.y = Input.get_action_strength("down")-Input.get_action_strength("up")
@@ -113,3 +113,13 @@ func _on_Area2D_body_entered(body):
 
 func _on_EnemyCollider_body_entered(body):
 	pass
+
+
+func _on_KeyArea_area_entered(area):
+	print('hello')
+
+
+func _on_KeyArea_body_entered(body):
+	$key.show()
+	colliding = true
+	collidingGroup = "KeyArea"

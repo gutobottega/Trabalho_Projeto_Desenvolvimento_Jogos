@@ -41,31 +41,28 @@ position = Vector2( 12.7423, 226.53 )
 scale = Vector2( 2, 2 )
 
 [node name="Adult Enemy" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.333333, 0.568627, 0.937255, 1 )
 position = Vector2( 1181.89, -149.921 )
+scale = Vector2( 2, 2 )
 
 [node name="Adult Enemy2" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.0313726, 0.65098, 0.0117647, 1 )
 position = Vector2( 481.476, -248.698 )
+scale = Vector2( 2, 2 )
 
 [node name="Adult Enemy3" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.976471, 0.984314, 0.0156863, 1 )
 position = Vector2( 1096.58, 804.171 )
+scale = Vector2( 2, 2 )
 
 [node name="Adult Enemy4" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.407843, 0.0156863, 0.603922, 1 )
 position = Vector2( 864.091, 1304.49 )
+scale = Vector2( 2, 2 )
 
 [node name="Adult Enemy5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1593.89, 178.958 )
-
-[node name="Adult Enemy6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 231, -379 )
-
-[node name="Adult Enemy7" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1846.92, 707.07 )
-
-[node name="Adult Enemy8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 530.532, 796.385 )
-
-[node name="Adult Enemy9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 770, -346 )
+scale = Vector2( 2, 2 )
 
 [node name="Houses" parent="." instance=ExtResource( 1 )]
 position = Vector2( -63, 0 )
@@ -74,6 +71,7 @@ tile_data = PoolIntArray( 1, 37, 0, 65538, 38, 0, 131076, 37, 0, 262147, 37, 0 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="Adult" method="_on_Timer_timeout"]
