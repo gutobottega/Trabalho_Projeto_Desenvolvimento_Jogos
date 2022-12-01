@@ -13,73 +13,73 @@ extents = Vector2( 13.376, 16.9548 )
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 228, 278 )
+region = Rect2( 0, 278, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 228, 0, 228, 278 )
+region = Rect2( 228, 278, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 456, 0, 228, 278 )
+region = Rect2( 456, 278, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 684, 0, 228, 278 )
+region = Rect2( 684, 278, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 0, 278, 228, 278 )
+region = Rect2( 0, 556, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 228, 278, 228, 278 )
+region = Rect2( 228, 556, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 456, 278, 228, 278 )
+region = Rect2( 456, 556, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 684, 278, 228, 278 )
+region = Rect2( 684, 556, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 0, 556, 228, 278 )
+region = Rect2( 0, 0, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 228, 556, 228, 278 )
+region = Rect2( 228, 0, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 456, 556, 228, 278 )
+region = Rect2( 456, 0, 228, 278 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 6 )
-region = Rect2( 684, 556, 228, 278 )
+region = Rect2( 684, 0, 228, 278 )
 
 [sub_resource type="SpriteFrames" id=14]
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
-"name": "Down",
+"name": "Up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
-"name": "Up",
+"name": "Left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 1 ) ],
@@ -89,7 +89,7 @@ animations = [ {
 }, {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
-"name": "Left",
+"name": "Down",
 "speed": 5.0
 } ]
 
