@@ -4,7 +4,10 @@ onready var timer = $Timer
 onready var nav = $Navigation2D
 onready var player = $Player
 onready var enemy = $Enemy
+onready var audio = $AudioStreamPlayer
 
+func _ready():
+	audio.play()
 
 func _on_Area2D_body_entered(body):
 	print('scene')

@@ -54,7 +54,7 @@ func _process(delta):
 	
 	for member in get_tree().get_nodes_in_group("Adult_Enemy"):
 		if movement == "Attack" and abs(position.x - member.position.x) < 80 and abs(position.y - member.position.y) < 80:
-			member.hit = member.hit - 10
+			member.hit = member.hit - delta * 1000
 			
 	if killed == 5:
 		get_tree().change_scene("res://Transitions/VictoryScreen.tscn")

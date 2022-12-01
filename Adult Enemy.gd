@@ -8,7 +8,8 @@ var move_speed = 350
 var path = []
 var nav 
 var threshold = 5
-export var hit = 1000
+export var hit = 3000
+var amount = 0
 var near_player = false
 
 
@@ -30,6 +31,7 @@ func _process(delta):
 		add_to_group("Adult_Enemy")
 		if abs(player.position.x - position.x) < 50 and abs(player.position.y - position.y) < 50:
 			near_player = true
+			amount = delta * 1000
 		else:
 			near_player = false
 	else:
@@ -60,9 +62,10 @@ func move():
 	velocity = move_and_slide(velocity)
 	
 func get_target_path(target_pos):
+	print(amount)
 	if near_player:
 		sprite.play("Attack")
-		player.hit = player.hit - 10
+		player.hit = player.hit - amount
 	else:
 		sprite.play('Walk')
 	path = nav.get_simple_path(global_position, target_pos, false)
